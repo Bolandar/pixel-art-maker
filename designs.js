@@ -21,10 +21,12 @@ function makeGrid() {
   inputHeight = document.querySelector('#inputHeight').value;
   inputWidth = document.querySelector('#inputWidth').value;
 
-  var tableHTML =''
+
 
   function colorClick() {
-
+    color = document.querySelector('#colorPicker').value;
+    event.target.style.backgroundColor = color;
+    console.log('Hello');
   }
 
   for (var height = 0; height < inputHeight; ++height) {
