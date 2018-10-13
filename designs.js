@@ -1,5 +1,5 @@
 // Select color input
-
+var pixelColor;
 
 // Select size input
 var inputHeight, inputWidth;
@@ -22,13 +22,19 @@ function makeGrid() {
   inputWidth = document.querySelector('#inputWidth').value;
 
   var tableHTML =''
-  for (var height = 0; height < inputHeight; ++height) {
-    tableHTML = tableHTML + '<tr>';
-    for (var width = 0; width < inputWidth; ++width) {
-      tableHTML = tableHTML + '<td></td>';
-    }
-    tableHTML = tableHTML + '</tr>';
-  }
-  pixelGrid.insertAdjacentHTML('beforeend', tableHTML);
 
+  function colorClick() {
+
+  }
+
+  for (var height = 0; height < inputHeight; ++height) {
+
+    var newRow = document.createElement('tr');
+    pixelGrid.appendChild(newRow);
+    for (var width = 0; width < inputWidth; ++width) {
+      const newPixel = document.createElement('td');
+      newRow.appendChild(newPixel);
+      newRow.addEventListener('click', colorClick);
+    }
+  }
 }
