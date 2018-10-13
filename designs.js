@@ -21,6 +21,13 @@ function makeGrid() {
   inputHeight = document.querySelector('#inputHeight').value;
   inputWidth = document.querySelector('#inputWidth').value;
 
+  if (inputHeight > 100) {
+    inputHeight = 100;
+  };
+
+  if (inputWidth > 100) {
+    inputWidth = 100;
+  }
 
 
   function colorClick() {
