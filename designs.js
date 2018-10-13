@@ -37,13 +37,13 @@ function makeGrid() {
   }
 
   // Build grid based on user form input
-  for (var height = 0; height < inputHeight; ++height) { //Create row
+  for (var height = 0; height < inputHeight; ++height) { //Loop creates rows
     var newRow = document.createElement('tr');
     pixelGrid.appendChild(newRow);
-    for (var width = 0; width < inputWidth; ++width) { //Create pixel
+    for (var width = 0; width < inputWidth; ++width) { //Loop create pixels
       const newPixel = document.createElement('td');
       newRow.appendChild(newPixel);
-      newRow.addEventListener('click', colorClick);
+      newPixel.addEventListener('click', colorClick);//Add click event to pixels
     }
   }
 }
