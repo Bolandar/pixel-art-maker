@@ -1,8 +1,8 @@
 // Select color input
-var pixelColor;
+let pixelColor;
 
 // Select size input
-var inputHeight, inputWidth;
+let inputHeight, inputWidth;
 
 // When size is submitted by the user, call makeGrid()
 
@@ -38,7 +38,7 @@ function makeGrid() {
 
   // Build grid based on user form input
   for (var height = 0; height < inputHeight; ++height) { //Loop creates rows
-    var newRow = document.createElement('tr');
+    const newRow = document.createElement('tr');
     pixelGrid.appendChild(newRow);
     for (var width = 0; width < inputWidth; ++width) { //Loop create pixels
       const newPixel = document.createElement('td');
